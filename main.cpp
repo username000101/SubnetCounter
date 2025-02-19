@@ -35,7 +35,7 @@ int main(int argc, char** argv) {
 		std::cout << "Адрес сети: 192.168.0." << address << "/" << 24 + bytes_to_mask << std::endl;
 		std::cout << "Широковещательный адрес: 192.168.0." << address + hosts + 1 << "/" << 24 + bytes_to_mask << std::endl;
 		for (int j = 1; j <= hosts; ++j) {
-			std::cout << "Адрес хоста №" << j << ": 192.168.0." << j << " / " << 24 + bytes_to_mask << std::endl;
+			std::cout << "Адрес хоста №" << j << ": 192.168.0." << address + j << " / " << 24 + bytes_to_mask << std::endl;
 		}
 		address += hosts + 2;
 	}
